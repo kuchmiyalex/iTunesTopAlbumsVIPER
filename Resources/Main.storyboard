@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ma1-T9-eY4">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Xba-2n-IQp">
+            <objects>
+                <navigationController storyboardIdentifier="RootNavVC" id="ma1-T9-eY4" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sr7-Qe-jav">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rPO-OI-ODX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-376" y="211"/>
+        </scene>
+        <!--ListVC-->
+        <scene sceneID="OFa-Y3-8Yh">
+            <objects>
+                <viewController storyboardIdentifier="ListVC" id="Rtc-a4-6u9" customClass="ListVC" customModule="iTunes_Albums" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BfY-Dh-Gtm"/>
+                        <viewControllerLayoutGuide type="bottom" id="21w-eb-t7Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DNF-Ha-3Qp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLw-GM-JNi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="delegate" destination="Rtc-a4-6u9" id="lsw-dy-nYZ"/>
+                                </connections>
+                            </scrollView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="J1U-tj-6xS">
+                                <rect key="frame" x="177" y="190" width="20" height="20"/>
+                                <animations/>
+                            </activityIndicatorView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="kkh-8l-OC8" userLabel="pageControl">
+                                <rect key="frame" x="168" y="363" width="39" height="37"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="pageControlPressed:" destination="Rtc-a4-6u9" eventType="valueChanged" id="7Yg-iG-Rsu"/>
+                                </connections>
+                            </pageControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yK7-Ji-5WX" userLabel="descriptionContainer">
+                                <rect key="frame" x="0.0" y="400" width="375" height="267"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8CT-L6-WiX">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="197"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" label="Album description"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xm-Id-j8y">
+                                        <rect key="frame" x="122" y="214" width="131" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6xm-Id-j8y" secondAttribute="height" multiplier="131:30" id="k8i-hg-kRA"/>
+                                            <constraint firstAttribute="width" constant="131" id="riJ-cG-6Hr"/>
+                                        </constraints>
+                                        <state key="normal" title="NEXT"/>
+                                        <connections>
+                                            <action selector="nextPressed:" destination="Rtc-a4-6u9" eventType="touchUpInside" id="l5l-MN-pBa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="8CT-L6-WiX" firstAttribute="top" secondItem="yK7-Ji-5WX" secondAttribute="top" id="Md9-3o-QTV"/>
+                                    <constraint firstAttribute="trailing" secondItem="8CT-L6-WiX" secondAttribute="trailing" id="bgi-zw-bco"/>
+                                    <constraint firstAttribute="bottom" secondItem="6xm-Id-j8y" secondAttribute="bottom" constant="23" id="i1N-Nn-VBO"/>
+                                    <constraint firstItem="8CT-L6-WiX" firstAttribute="leading" secondItem="yK7-Ji-5WX" secondAttribute="leading" id="i8e-Vf-kXQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="8CT-L6-WiX" secondAttribute="bottom" constant="70" id="pbL-Vu-dR4"/>
+                                    <constraint firstItem="6xm-Id-j8y" firstAttribute="centerX" secondItem="yK7-Ji-5WX" secondAttribute="centerX" id="pnv-6c-NU0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yK7-Ji-5WX" firstAttribute="leading" secondItem="DNF-Ha-3Qp" secondAttribute="leading" id="AFG-ZX-RTz"/>
+                            <constraint firstItem="J1U-tj-6xS" firstAttribute="centerX" secondItem="gLw-GM-JNi" secondAttribute="centerX" id="DV4-On-i9A"/>
+                            <constraint firstItem="21w-eb-t7Z" firstAttribute="top" secondItem="yK7-Ji-5WX" secondAttribute="bottom" id="FqP-Ur-SLE"/>
+                            <constraint firstItem="J1U-tj-6xS" firstAttribute="centerY" secondItem="gLw-GM-JNi" secondAttribute="centerY" id="Kba-d5-tOa"/>
+                            <constraint firstItem="kkh-8l-OC8" firstAttribute="centerX" secondItem="gLw-GM-JNi" secondAttribute="centerX" id="N3O-2N-j0Z"/>
+                            <constraint firstItem="kkh-8l-OC8" firstAttribute="bottom" secondItem="gLw-GM-JNi" secondAttribute="bottom" id="Qlu-Jm-UVL"/>
+                            <constraint firstAttribute="trailing" secondItem="yK7-Ji-5WX" secondAttribute="trailing" id="Rbq-nN-OCS"/>
+                            <constraint firstItem="gLw-GM-JNi" firstAttribute="leading" secondItem="DNF-Ha-3Qp" secondAttribute="leading" id="SJh-Gd-4Eu"/>
+                            <constraint firstItem="gLw-GM-JNi" firstAttribute="top" secondItem="DNF-Ha-3Qp" secondAttribute="top" id="SMq-U7-aQO"/>
+                            <constraint firstItem="yK7-Ji-5WX" firstAttribute="top" secondItem="gLw-GM-JNi" secondAttribute="bottom" id="hXi-cf-qCa"/>
+                            <constraint firstAttribute="trailing" secondItem="gLw-GM-JNi" secondAttribute="trailing" id="iqx-KB-zYg"/>
+                            <constraint firstItem="gLw-GM-JNi" firstAttribute="height" secondItem="DNF-Ha-3Qp" secondAttribute="height" multiplier="0.6" id="pAz-DA-Ptb"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="actView" destination="J1U-tj-6xS" id="vfD-M3-dcW"/>
+                        <outlet property="butNext" destination="6xm-Id-j8y" id="7Uq-aH-gCp"/>
+                        <outlet property="pageControl" destination="kkh-8l-OC8" id="xEN-8e-OXw"/>
+                        <outlet property="scroll" destination="gLw-GM-JNi" id="tp9-L0-8a5"/>
+                        <outlet property="txtInfo" destination="8CT-L6-WiX" id="tIc-xI-bYp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cOX-rY-loD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="163.5" y="210.5"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="io6-2j-bcB">
+            <objects>
+                <viewController storyboardIdentifier="DetailsVC" id="Gh9-3L-uBP" customClass="DetailsVC" customModule="iTunes_Albums" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="by6-D1-mre"/>
+                        <viewControllerLayoutGuide type="bottom" id="mHc-qk-QXF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yHw-Ga-NYm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gOC-BM-CX3" customClass="RemoteImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                <animations/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ULl-ML-BBQ">
+                                <rect key="frame" x="0.0" y="400" width="375" height="267"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="Album description"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gOC-BM-CX3" firstAttribute="top" secondItem="yHw-Ga-NYm" secondAttribute="top" id="4Je-vl-qJT"/>
+                            <constraint firstItem="mHc-qk-QXF" firstAttribute="top" secondItem="ULl-ML-BBQ" secondAttribute="bottom" id="HSG-Zd-3ju"/>
+                            <constraint firstItem="gOC-BM-CX3" firstAttribute="leading" secondItem="yHw-Ga-NYm" secondAttribute="leading" id="LCE-0e-i66"/>
+                            <constraint firstAttribute="trailing" secondItem="gOC-BM-CX3" secondAttribute="trailing" id="kH4-pR-ITg"/>
+                            <constraint firstItem="ULl-ML-BBQ" firstAttribute="leading" secondItem="yHw-Ga-NYm" secondAttribute="leading" id="onh-Mo-iyZ"/>
+                            <constraint firstItem="ULl-ML-BBQ" firstAttribute="top" secondItem="gOC-BM-CX3" secondAttribute="bottom" id="pLE-fC-kll"/>
+                            <constraint firstAttribute="trailing" secondItem="ULl-ML-BBQ" secondAttribute="trailing" id="ph2-3i-bhH"/>
+                            <constraint firstItem="gOC-BM-CX3" firstAttribute="height" secondItem="yHw-Ga-NYm" secondAttribute="height" multiplier="0.6" id="rrI-6N-XbQ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="cover" destination="gOC-BM-CX3" id="WuG-E4-3Rc"/>
+                        <outlet property="txtInfo" destination="ULl-ML-BBQ" id="VhJ-tg-NIe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S9u-JR-rVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="691.5" y="210.5"/>
+        </scene>
+    </scenes>
+</document>
