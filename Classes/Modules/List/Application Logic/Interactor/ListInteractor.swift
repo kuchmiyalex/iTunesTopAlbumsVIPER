@@ -20,7 +20,7 @@ class ListInteractor: NSObject, ListInteractorInput {
 
     func loadAlbums()
     {
-        serverApi?.getTopAlbums(maxCount: 15, completionHandler: { (items, error) -> Void in
+        serverApi?.getTopAlbums(maxCount: Constants.AlbumsCount, completionHandler: { (items, error) -> Void in
             let sorted = self.dataManager.albumsSortedByName(items)
             self.output?.loadedAlbums(sorted, error: error)
         })

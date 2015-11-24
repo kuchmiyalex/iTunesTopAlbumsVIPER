@@ -8,13 +8,11 @@
 
 import UIKit
 
-let AlbumsTopEndpoint = "https://itunes.apple.com/us/rss/topalbums/limit=%i/json"
-
 class ServerApi: NSObject {
 
     func getTopAlbums(maxCount limit: Int, completionHandler: ([AlbumItem]!, NSError?) -> Void) -> Void
     {
-        let requestString = AlbumsTopEndpoint.stringByReplacingOccurrencesOfString("%i", withString: "\(limit)")
+        let requestString = Constants.AlbumsTopEndpoint.stringByReplacingOccurrencesOfString("%i", withString: "\(limit)")
         let url: NSURL = NSURL(string: requestString)!
         let ses = NSURLSession.sharedSession()
         let task = ses.dataTaskWithURL(url, completionHandler: {data, response, error -> Void in

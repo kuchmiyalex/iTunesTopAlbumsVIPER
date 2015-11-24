@@ -11,6 +11,7 @@
 		FF23B6261C0459CE000654F9 /* sampleJSONResponse in Resources */ = {isa = PBXBuildFile; fileRef = FF23B6251C0459CE000654F9 /* sampleJSONResponse */; };
 		FF23B6271C045E22000654F9 /* sampleJSONResponse in Resources */ = {isa = PBXBuildFile; fileRef = FF23B6251C0459CE000654F9 /* sampleJSONResponse */; };
 		FF23B62F1C04B732000654F9 /* iTunes_AlbumsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23B62E1C04B732000654F9 /* iTunes_AlbumsUITests.swift */; };
+		FF8EA22D1C04D6A000275EDF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8EA22C1C04D6A000275EDF /* Constants.swift */; };
 		FFC7F98F1C0347F40002E77D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC7F98B1C0347F40002E77D /* Assets.xcassets */; };
 		FFC7F9911C0347F40002E77D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC7F98D1C0347F40002E77D /* LaunchScreen.storyboard */; };
 		FFC7F9921C0347F40002E77D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC7F98E1C0347F40002E77D /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 		FF23B62C1C04B732000654F9 /* iTunes AlbumsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iTunes AlbumsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF23B62E1C04B732000654F9 /* iTunes_AlbumsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunes_AlbumsUITests.swift; sourceTree = "<group>"; };
 		FF23B6301C04B732000654F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF8EA22C1C04D6A000275EDF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FFC7F9751C0347C10002E77D /* iTunes Albums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes Albums.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC7F98B1C0347F40002E77D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFC7F98C1C0347F40002E77D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				FFC7F9991C034B850002E77D /* Modules */,
 				FFC7F9941C0348160002E77D /* AppDelegate.swift */,
 				FFC7F9961C03483E0002E77D /* AppDependencies.swift */,
+				FF8EA22C1C04D6A000275EDF /* Constants.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF8EA22D1C04D6A000275EDF /* Constants.swift in Sources */,
 				FFC7F9A71C034DBC0002E77D /* ListVC.swift in Sources */,
 				FFC7F9B11C034EEE0002E77D /* ListDataManager.swift in Sources */,
 				FFC7F9BA1C0350310002E77D /* AlbumItem.swift in Sources */,
@@ -778,6 +782,7 @@
 				FF23B6231C0458D4000654F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF23B6331C04B732000654F9 /* Build configuration list for PBXNativeTarget "iTunes AlbumsUITests" */ = {
 			isa = XCConfigurationList;
@@ -786,6 +791,7 @@
 				FF23B6351C04B732000654F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFC7F9701C0347C10002E77D /* Build configuration list for PBXProject "iTunes Albums VIPER" */ = {
 			isa = XCConfigurationList;
